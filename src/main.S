@@ -45,9 +45,9 @@ main:
 ; Warning blink
 warning_loop:
   ldi r24, 8 
-  L4: call warning_blink
+  L3: call warning_blink
       dec r24
-      brne L4
+      brne L3
       ret
 
 warning_blink:
@@ -75,12 +75,12 @@ delay_15s:
       ldi  r19, 194
       ldi  r20, 134
       ldi  r21, 33
-  L3: dec  r21
-      brne L3
+  L2: dec  r21
+      brne L2
       dec  r20
-      brne L3
+      brne L2
       dec  r19
-      brne L3
+      brne L2
       dec  r18
-      brne L3
+      brne L2
       ret
